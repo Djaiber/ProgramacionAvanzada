@@ -1,17 +1,14 @@
-function ordenarBurbuja() {
-  var input = document.getElementById('burbujaInput').value;
-  // Aquí puedes implementar la lógica de ordenamiento con el algoritmo de Burbuja
-  // y actualizar la entrada con el resultado
-}
+document.getElementById("entradas").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita el envío del formulario por defecto
 
-function ordenarSeleccion() {
-  var input = document.getElementById('seleccionInput').value;
-  // Aquí puedes implementar la lógica de ordenamiento con el algoritmo de Selección
-  // y actualizar la entrada con el resultado
-}
+  // Captura los valores del formulario
+  var nombre = encodeURIComponent(document.querySelector("input[name='nombre']").value);
+  var email = encodeURIComponent(document.querySelector("input[name='email']").value);
+  
+  // Construye la URL con los parámetros GET
+  var url = "ValoresRecibidos.html=" + nombre + "&email=" + email;
+  
+  // Redirecciona a la otra página
+  window.location.href = url;
+});
 
-function ordenarInsercion() {
-  var input = document.getElementById('insercionInput').value;
-  // Aquí puedes implementar la lógica de ordenamiento con el algoritmo de Inserción
-  // y actualizar la entrada con el resultado
-}

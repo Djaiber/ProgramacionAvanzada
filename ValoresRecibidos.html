@@ -1,0 +1,20 @@
+<script>
+    // Función para obtener los parámetros GET de la URL
+    function getParametro(nombre) {
+      var urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(nombre);
+    }
+    
+    // Obtén los valores de los parámetros
+    var nombreValor = getParametro("nombre");
+    var emailValor = getParametro("email");
+    
+    // Muestra los valores en la página
+    document.getElementById("nombreResultado").textContent = nombreValor;
+    document.getElementById("emailResultado").textContent = emailValor;
+    </script>
+    
+    <!-- Mostrar los valores en la página -->
+    <p>Nombre: <span id="nombreResultado"></span></p>
+    <p>Email: <span id="emailResultado"></span></p>
+    
