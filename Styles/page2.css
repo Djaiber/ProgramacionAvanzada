@@ -1,0 +1,83 @@
+/* Los elementos con id se llama con # */
+#title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+p.text{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #15016f;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+p.special{
+  text-align: left;
+  font-size: 24px;
+  font-weight: normal;
+  color: #0dba27;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+div p{
+  text-align: lright;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #da1a81;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+div h1, div h2{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #0e0349;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+table, th, td {
+   
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+/* El * es para que se aplique a todos los elementos de la página */
+*{
+  font-size: 20px;
+  color: black;
+}
+/*
+solid: Crea un borde sólido y uniforme alrededor del elemento.
+dashed: Crea un borde discontinuo con líneas discontinuas.
+dotted: Crea un borde con puntos pequeños y separados.
+double: Crea un borde con dos líneas paralelas.
+groove: Crea un borde tallado en el elemento, dando la apariencia de estar hundido.
+ridge: Crea un borde tallado en el elemento, dando la apariencia de estar sobresaliendo.
+inset: Crea un borde con una sombra interna, dando la apariencia de estar hundido.
+outset: Crea un borde con una sombra externa, dando la apariencia de estar sobresaliendo.
+none
+hiddden*/
+.color{
+  /* border: 3px  black dashed; */
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 5px;	
+}
+#fondo {
+  /* background-color: rgba(0,0,0,0.2) */
+  /* background-color: #68b114; */
+  /* opacity: 0.5; */
+  background-image: url("../images/background.jpg");
+  background-size: contain;
+  height: 200px;
+ 
+  
+}
