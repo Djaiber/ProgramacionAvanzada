@@ -6,7 +6,74 @@
 <html>
   <body>
 
-<h1>Hello, World!</h1>
+    <div class="margen">
+      <h1 id="title">Algoritmos de Ordenamiento</h1>
+      <p class="text">Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
+        de elementos.
+        Los elementos pueden ser números, letras o cualquier otro tipo de datos. El ordenamiento se puede realizar en orden
+        ascendente o descendente.</p>
+      </br>
+    
+      <!--En el action colocacamos la ruta donde queremos que se envie la informacion-->
+    
+      <form action="Page2.html" method="GET">
+        <table>
+          <thead>
+            <th colspan="3">Algoritmos de Ordenamiento</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4"><br><img src="images\sort-algoritms.png" alt="Image" width="220"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="Algoritmo1" name="Algoritmo1" placeholder="Algoritmo 1">
+                <label for="Algoritmo1">Tipo 1</label><br>
+              </td>
+              <td>
+                <input type="text" id="Algoritmo2" name="Algoritmo2" placeholder="Algoritmo 2">
+                <label for="Algoritmo2">Tipo 2</label><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="Algoritmo3" name="Algoritmo3" placeholder="Algoritmo 3">
+                <label for="Algoritmo3">Tipo 3</label><br>
+              </td>
+              <td>
+                <input type="text" id="Algoritmo4" name="Algoritmo4" placeholder="Algoritmo 4">
+                <label for="Algoritmo4">Tipo 4</label><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="Algoritmo5" name="Algoritmo5" placeholder="Algoritmo 5">
+                <label for="Algoritmo5">Tipo 5</label><br>
+              </td>
+              <td>
+                <input type="text" id="Algoritmo6" name="Algoritmo6" placeholder="Algoritmo 6">
+                <label for="Algoritmo6">Tipo 6</label><br>
+              </td>
+            </tr>
+          </tbody>
+          <!-- Table footer -->
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                <textarea cols="50" id="OtrosAlgoritmos" placeholder="Sí recuerda, agrege otros algoritmos">
+            </textarea>
+                <label for="OtrosAlgoritmos">Otros Algoritmos</label><br>
+              </td>
+                <td>
+                  <!--El boton submit es el que envia la informacion-->
+                  <button type="submit"><img src="images\icons8-send-button-64.png" />Enviar Datos</button>
+                </td>
+              </tr>       
+          </tfoot>
+        </table>
+      </form>
+    </div>
+    
 
 <h1>HTML FILE</h1>
 <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear 
