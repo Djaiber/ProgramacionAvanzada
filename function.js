@@ -1,16 +1,27 @@
-var Algoritmo1 = document.getElementById("Algoritmo1").value;
-var Algoritmo2 = document.getElementById("Algoritmo2").value;
-var Algoritmo3 = document.getElementById("Algoritmo3").value;
-var Algoritmo4 = document.getElementById("Algoritmo4").value;
-var Algoritmo5 = document.getElementById("Algoritmo5").value;
-var Algoritmo6 = document.getElementById("Algoritmo6").value;
-var OtrosAlgoritmos = document.getElementById("OtrosAlgoritmos").value;
+window.onload = function() {
+  // Obtén los parámetros de la URL
+  const params = new URLSearchParams(window.location.search);
 
-var table = "<table><thead> <th colspan='3'>Algoritmos de Ordenamiento</th></thead><tbody><tr><td rowspan='4'><br><img src='images/sort-algoritms.png' alt='Image' width='220'></td></tr><tr><td>"+Algoritmo1+"</td><td>"+Algoritmo2+"</td></tr><tr><td>"+Algoritmo3+"</td><td>"+Algoritmo4+"</td></tr><tr><td>"+Algoritmo5+"</td><td>"+Algoritmo6+"</td></tr></tbody><tfoot><tr><td colspan='2'><textarea cols='50' id='OtrosAlgoritmos' placeholder='Sí recuerda, agrege otros algoritmos'>"+OtrosAlgoritmos+"</textarea></td><td><button type='submit'><img src='images/icons8-send-button-64.png' />Enviar Datos</button></td></tr></tfoot></table>";
+  // Obtiene los valores de los parámetros del formulario
+  const algoritmo1 = params.get('Algoritmo1');
+  const algoritmo2 = params.get('Algoritmo2');
+  const algoritmo3 = params.get('Algoritmo3');
+  const algoritmo4 = params.get('Algoritmo4');
+  const algoritmo5 = params.get('Algoritmo5');
+  const algoritmo6 = params.get('Algoritmo6');
 
-document.getElementById("table_id").innerHTML = table;
+  // ... Obtén los otros valores de algoritmos
 
-function sendTable() {
-  document.getElementById("table_id").innerHTML = table;
-  window.location.href = "Page3.html";
-}
+  // Actualiza el contenido de elementos HTML con los valores
+  document.getElementById('resultadoAlgoritmo1').textContent = algoritmo1;
+  document.getElementById('resultadoAlgoritmo2').textContent = algoritmo2;
+  document.getElementById('resultadoAlgoritmo3').textContent = algoritmo3;
+  document.getElementById('resultadoAlgoritmo4').textContent = algoritmo4;
+  document.getElementById('resultadoAlgoritmo5').textContent = algoritmo5;
+  document.getElementById('resultadoAlgoritmo6').textContent = algoritmo6;
+  // ... Actualiza los otros elementos HTML con los valores
+
+  // También puedes hacer algo similar con el textarea
+  const otrosAlgoritmos = params.get('OtrosAlgoritmos');
+  document.getElementById('resultadoOtrosAlgoritmos').textContent = otrosAlgoritmos;
+};
