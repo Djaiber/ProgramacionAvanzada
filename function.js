@@ -8,6 +8,7 @@ function validarCampos(){
   var otrosAlgoritmos = document.getElementById("OtrosAlgoritmos").value;
   if (algoritmo1 == "" || algoritmo2 == "" || algoritmo3 == "" || algoritmo4 == "" || algoritmo5 == "" || algoritmo6 == "" || otrosAlgoritmos == "") {
     alert("Todos los campos son obligatorios");
+    event.preventDefault();
     return false;
   }
   else if (algoritmo1.length > 20 || algoritmo2.length > 20 || algoritmo3.length > 20 || algoritmo4.length > 20 || algoritmo5.length > 20 || algoritmo6.length > 20 || otrosAlgoritmos.length > 20) {
