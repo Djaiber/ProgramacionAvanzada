@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curriculum Vitae Form</title>
+  <link rel="stylesheet" href="Styles\cv_form.css">
+  <script src="Scripts/image.js"></script>
+</head>
+<body>
+  <h1>Curriculum Vitae Form</h1>
+  <form action="submit_cv.php" method="POST">
+
+    <h2>Upload CV Image</h2>
+    <label for="cv_image">Upload an Image:</label>
+    <input type="file" id="cv_image" name="cv_image" onchange="previewImage(event)"><br><br>
+    
+    <img id="image_preview" src="#" alt="Image Preview">
+
+
+    <h2>Personal Information</h2>
+    <label for="full_name">Full Name:</label>
+    <input type="text" id="full_name" name="full_name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <h2>Work Experience</h2>
+    <label for="job_title_1">Job Title:</label>
+    <input type="text" id="job_title_1" name="job_title_1" required><br><br>
+
+    <label for="employer_1">Employer:</label>
+    <input type="text" id="employer_1" name="employer_1" required><br><br>
+
+    <label for="work_period_1">Work Period:</label>
+    <input type="text" id="work_period_1" name="work_period_1" required><br><br>
+
+    <!-- Repeat the above fields for additional work experiences -->
+
+    <h2>Education</h2>
+    <label for="degree_1">Degree:</label>
+    <input type="text" id="degree_1" name="degree_1" required><br><br>
+
+    <label for="institution_1">Institution:</label>
+    <input type="text" id="institution_1" name="institution_1" required><br><br>
+
+    <label for="graduation_year_1">Graduation Year:</label>
+    <input type="text" id="graduation_year_1" name="graduation_year_1" required><br><br>
+
+    <!-- Repeat the above fields for additional education entries -->
+
+    <h2>Skills</h2>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="skills[]" value="Communication"> Communication
+      </label>
+      <label>
+        <input type="checkbox" name="skills[]" value="Teamwork"> Teamwork
+      </label>
+      <label>
+        <input type="checkbox" name="skills[]" value="Problem Solving"> Problem Solving
+      </label>
+      <!-- Add more checkbox options as needed -->
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
