@@ -1,4 +1,6 @@
 // script.js
+
+    
 window.onload = function() {
     // Obtén los parámetros de la URL
     const params = new URLSearchParams(window.location.search);
