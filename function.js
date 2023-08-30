@@ -1,27 +1,21 @@
-window.onload = function() {
-  // Obtén los parámetros de la URL
-  const params = new URLSearchParams(window.location.search);
-
-  // Obtiene los valores de los parámetros del formulario
-  const algoritmo1 = params.get('Algoritmo1');
-  const algoritmo2 = params.get('Algoritmo2');
-  const algoritmo3 = params.get('Algoritmo3');
-  const algoritmo4 = params.get('Algoritmo4');
-  const algoritmo5 = params.get('Algoritmo5');
-  const algoritmo6 = params.get('Algoritmo6');
-
-  // ... Obtén los otros valores de algoritmos
-
-  // Actualiza el contenido de elementos HTML con los valores
-  document.getElementById('resultadoAlgoritmo1').textContent = algoritmo1;
-  document.getElementById('resultadoAlgoritmo2').textContent = algoritmo2;
-  document.getElementById('resultadoAlgoritmo3').textContent = algoritmo3;
-  document.getElementById('resultadoAlgoritmo4').textContent = algoritmo4;
-  document.getElementById('resultadoAlgoritmo5').textContent = algoritmo5;
-  document.getElementById('resultadoAlgoritmo6').textContent = algoritmo6;
-  // ... Actualiza los otros elementos HTML con los valores
-
-  // También puedes hacer algo similar con el textarea
-  const otrosAlgoritmos = params.get('OtrosAlgoritmos');
-  document.getElementById('resultadoOtrosAlgoritmos').textContent = otrosAlgoritmos;
-};
+function validarCampos(){
+  var algoritmo1 = document.getElementById("Algoritmo1").value;
+  var algoritmo2 = document.getElementById("Algoritmo2").value;
+  var algoritmo3 = document.getElementById("Algoritmo3").value;
+  var algoritmo4 = document.getElementById("Algoritmo4").value;
+  var algoritmo5 = document.getElementById("Algoritmo5").value;
+  var algoritmo6 = document.getElementById("Algoritmo6").value;
+  var otrosAlgoritmos = document.getElementById("OtrosAlgoritmos").value;
+  if (algoritmo1 == "" || algoritmo2 == "" || algoritmo3 == "" || algoritmo4 == "" || algoritmo5 == "" || algoritmo6 == "" || otrosAlgoritmos == "") {
+    alert("Todos los campos son obligatorios");
+    return false;
+  }
+  else if (algoritmo1.length > 20 || algoritmo2.length > 20 || algoritmo3.length > 20 || algoritmo4.length > 20 || algoritmo5.length > 20 || algoritmo6.length > 20 || otrosAlgoritmos.length > 20) {
+    alert("Los campos no pueden tener más de 20 caracteres");
+    return false;
+  }
+  else if (isNaN(algoritmo1) == false || isNaN(algoritmo2) == false || isNaN(algoritmo3) == false || isNaN(algoritmo4) == false || isNaN(algoritmo5) == false || isNaN(algoritmo6) == false || isNaN(otrosAlgoritmos) == false) {
+    alert("Los campos no pueden ser numéricos");
+    return false;
+  }
+}

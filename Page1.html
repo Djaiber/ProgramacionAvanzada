@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <head>
   <title>Programación Avanzada</title>
+  <link rel="script" href="script.js">
+  <link rel="script" href="function.js">
 </head>
-
+<script>
+   function validarCampos(){
+  var algoritmo1 = document.getElementById("Algoritmo1").value;
+  var algoritmo2 = document.getElementById("Algoritmo2").value;
+  var algoritmo3 = document.getElementById("Algoritmo3").value;
+  var algoritmo4 = document.getElementById("Algoritmo4").value;
+  var algoritmo5 = document.getElementById("Algoritmo5").value;
+  var algoritmo6 = document.getElementById("Algoritmo6").value;
+  var otrosAlgoritmos = document.getElementById("OtrosAlgoritmos").value;
+  if (algoritmo1 == "" || algoritmo2 == "" || algoritmo3 == "" || algoritmo4 == "" || algoritmo5 == "" || algoritmo6 == "" || otrosAlgoritmos == "") {
+    alert("Todos los campos son obligatorios");
+    event.preventDefault();
+    return false;
+  }
+  else if (algoritmo1.length > 20 || algoritmo2.length > 20 || algoritmo3.length > 20 || algoritmo4.length > 20 || algoritmo5.length > 20 || algoritmo6.length > 20 || otrosAlgoritmos.length > 20) {
+    alert("Los campos no pueden tener más de 20 caracteres");
+    return false;
+  }
+  else if (isNaN(algoritmo1) == false || isNaN(algoritmo2) == false || isNaN(algoritmo3) == false || isNaN(algoritmo4) == false || isNaN(algoritmo5) == false || isNaN(algoritmo6) == false || isNaN(otrosAlgoritmos) == false) {
+    alert("Los campos no pueden ser numéricos");
+    return false;
+  }
+}
+</script>
 <html>
+
   <body style="background-color: blanchedalmond; text-align: center;" >
-    <button type="button"><a href="Page2.html"> Page 2</a></button>
-    <button type="button"><a href="Page3.html"> Page 3</a></button>
+    <link rel="script" href="script.js">
+    <link rel="script" href="function.js">
+    
     </br>
     <div>
-      <h1 id="title">Algoritmos de Ordenamiento</h1>
-      <p>Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
+      <h1 style="font-family: 'cursive', sans-serif;
+      text-align: center;
+      
+      text-shadow: 3px 3px 3px #0fac2c;
+      font-size: 50px;
+      
+      font-weight: bold;
+      color: #000000;
+      margin-top: 10px;
+      margin-bottom: 50px;">Algoritmos de Ordenamiento</h1>
+      <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;
+      font-weight: bold;;">Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
         de elementos.
         Los elementos pueden ser números, letras o cualquier otro tipo de datos. El ordenamiento se puede realizar en orden
         ascendente o descendente.</p>
@@ -19,9 +56,9 @@
       <!--En el action colocacamos la ruta donde queremos que se envie la informacion-->
     
       <form action="Page2.html" method="GET">
-        <table style="margin: auto;">
+        <table style="margin: auto; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman'; background-color: rgb(173, 133, 72); ">
           <thead>
-            <th colspan="3">Algoritmos de Ordenamiento</th>
+            <th colspan="3" style="font-size: 24px;">Algoritmos de Ordenamiento</th>
           </thead>
           <tbody>
             <tr>
@@ -29,31 +66,31 @@
             </tr>
             <tr>
               <td>
-                <input type="text" id="Algoritmo1" name="Algoritmo1" placeholder="Algoritmo 1" required>
+                <input type="text" id="Algoritmo1" name="Algoritmo1" placeholder="Algoritmo 1" >
                 <label for="Algoritmo1">Tipo 1</label><br>
               </td>
               <td>
-                <input type="text" id="Algoritmo2" name="Algoritmo2" placeholder="Algoritmo 2" required>
+                <input type="text" id="Algoritmo2" name="Algoritmo2" placeholder="Algoritmo 2">
                 <label for="Algoritmo2">Tipo 2</label><br>
               </td>
             </tr>
             <tr>
               <td>
-                <input type="text" id="Algoritmo3" name="Algoritmo3" placeholder="Algoritmo 3" required>
+                <input type="text" id="Algoritmo3" name="Algoritmo3" placeholder="Algoritmo 3">
                 <label for="Algoritmo3">Tipo 3</label><br>
               </td>
               <td>
-                <input type="text" id="Algoritmo4" name="Algoritmo4" placeholder="Algoritmo 4" required>
+                <input type="text" id="Algoritmo4" name="Algoritmo4" placeholder="Algoritmo 4">
                 <label for="Algoritmo4">Tipo 4</label><br>
               </td>
             </tr>
             <tr>
               <td>
-                <input type="text" id="Algoritmo5" name="Algoritmo5" placeholder="Algoritmo 5" required>
+                <input type="text" id="Algoritmo5" name="Algoritmo5" placeholder="Algoritmo 5">
                 <label for="Algoritmo5">Tipo 5</label><br>
               </td>
               <td>
-                <input type="text" id="Algoritmo6" name="Algoritmo6" placeholder="Algoritmo 6" required>
+                <input type="text" id="Algoritmo6" name="Algoritmo6" placeholder="Algoritmo 6">
                 <label for="Algoritmo6">Tipo 6</label><br>
               </td>
             </tr>
@@ -62,23 +99,23 @@
           <tfoot>
             <tr>
               <td colspan="2">
-                <textarea cols="50" id="OtrosAlgoritmos" name="OtrosAlgoritmos" required>
+                <textarea cols="50" id="OtrosAlgoritmos" name="OtrosAlgoritmos">
             </textarea>
                 <label for="OtrosAlgoritmos">Otros Algoritmos</label><br>
               </td>
                 <td>
-                  <!--El boton submit es el que envia la informacion-->
-                  <button type="submit"><img src="images\icons8-send-button-64.png" />Enviar Datos</button>
+                  <input type="submit" value="Enviar Datos" onclick="validarCampos()">
                 </td>
               </tr>       
           </tfoot>
         </table>
       </form>
     </div>
-    
+  </br>
 
-<h1>HTML FILE</h1>
-<p>HTML (HyperText Markup Language) es el lenguaje estándar para crear 
+<h1 style="color:rgb(131, 5, 5);  margin: auto;
+border: 5px solid rgb(65, 3, 3); "></h1style>HTML FILE</h1>
+<p style="font-family: 'cursive', sans-serif; font-size: 20px;">HTML (HyperText Markup Language) es el lenguaje estándar para crear 
   páginas web. Utiliza etiquetas para estructurar el contenido, como encabezados,
    párrafos, listas y enlaces. Una característica interesante de HTML es su 
    capacidad para integrar contenido multimedia, como imágenes y videos, 
@@ -87,15 +124,17 @@
    optimización para motores de búsqueda.</p>
 
 
-<h1>CSS FILE</h1>
-<p>Un archivo .css es un archivo de hoja de estilo utilizado para dar estilo
+<h1 style="color:rgb(12, 67, 62);  margin: auto;
+border: 5px solid rgb(8, 107, 135);">CSS FILE</h1>
+<p style="font-family: 'cursive', sans-serif; font-size: 20px;">Un archivo .css es un archivo de hoja de estilo utilizado para dar estilo
    y diseño a los elementos de una página web. Define cómo se verán los elementos,
   como colores, fuentes, márgenes y disposición. Esto permite separar la 
   estructura HTML del diseño visual, lo que hace que el mantenimiento y 
   la actualización sean más eficientes.</p>
 
-<h1>JS FILE</h1>
-<p>JavaScript es un lenguaje de programación ampliamente utilizado en el 
+<h1 style="color: rgb(225, 178, 9); margin: auto;
+border: 5px solid rgb(147, 162, 8);"></h1style>JS FILE</h1>
+<p style="font-family: 'cursive', sans-serif;font-size: 20px ;" >JavaScript es un lenguaje de programación ampliamente utilizado en el 
   desarrollo web. Es un lenguaje de scripting que se ejecuta en el navegador 
   del usuario y permite la creación de interacciones dinámicas en una página web. 
   Puede manipular el contenido HTML, responder a eventos del usuario y comunicarse 
@@ -105,8 +144,9 @@
 <style>
   table, th, td {
    
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
+    margin: auto;
   }
   th, td {
     padding: 15px;
@@ -117,7 +157,7 @@
 
 <table>
 <thead>
-  <th colspan="3">Machine Learning</th>
+  <th colspan="3" style="background-color: aquamarine; font-size: 24px;">Machine Learning</th>
 </thead>
 </tbody>
 <tr>
@@ -151,7 +191,7 @@
 <table>
   <!-- Table header -->
   <thead>
-    <th colspan="4">Sistemas Operativos</th>
+    <th colspan="4" style="background-color: rgb(127, 72, 173); font-size: 24px; ">Sistemas Operativos</th>
   </thead>
   
   <!-- Table body -->
@@ -198,7 +238,7 @@
 </br>
 <table>
   <thead>
-    <th colspan="4">Principales Iniciativas de Open-Source</th>
+    <th colspan="4" style="background-color: rgb(165, 68, 15); font-size: 24px;">Principales Iniciativas de Open-Source</th>
   </thead>
 </tbody>  
 <tr>

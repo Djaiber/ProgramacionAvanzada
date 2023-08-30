@@ -3,10 +3,15 @@
 <head>
   <title>Programación Avanzada</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="Styles\page2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles\page2.css">
+  <link rel="script" href="script.js">
+  <link rel="script" href="function.js">  
+</head>
+<html>
+
 <script>
   window.onload = function() {
       // Obtén los parámetros de la URL
@@ -36,36 +41,23 @@
       document.getElementById('resultadoOtrosAlgoritmos').textContent = otrosAlgoritmos;
   };
 </script>
-</head>
 
-<html>
 
 <body>
-  <button type="button"><a href="Page1.html"> Page 1</a></button>
+  <link rel="script" href="script.js">
+  <link rel="script" href="function.js">
   <button type="button"><a href="Page3.html"> Page 3</a></button>
  </br>
-  <div>
-    <h1 id="fondo">Introducción a la Programación en HTML</h1>
-    <p class="decoration"> HTML (HyperText Markup Language) es un lenguaje de
-       marcado utilizado para crear y estructurar el contenido de las páginas web. 
-      Junto con CSS (Cascading Style Sheets) y JavaScript, HTML forma
-       la base de la programación web moderna.</p>
 
-
-    <h2>Uso de CSS y JavaScript</h2>
-    <p>Para dar estilo a las páginas web, se utiliza CSS para controlar el diseño y la presentación. JavaScript se utiliza para agregar interactividad y dinamismo a las páginas.</p>
-</div>
-
-<div class="margen">
-  <h1 id="title">Algoritmos de Ordenamiento</h1>
-  <p class="text">Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
+  <h1 id="fondo">Algoritmos de Ordenamiento</h1>
+  <p id="algoritmo">Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
     de elementos.
     Los elementos pueden ser números, letras o cualquier otro tipo de datos. El ordenamiento se puede realizar en orden
     ascendente o descendente.</p>
   </br>
 
   <!--En el action colocacamos la ruta donde queremos que se envie la informacion-->
-    <table>
+    <table id="TableAlg">
       <thead>
         <th colspan="3">Algoritmos de Ordenamiento</th>
       </thead>
@@ -90,17 +82,21 @@
       <!-- Table footer -->
       <tfoot>
         <tr>
-          <td colspan="3">
-            Otros Algoritmos: <span id="resultadoOtrosAlgoritmos"></span>
-          </td>       
+        <td colspan="2">
+          Otros Algoritmos: <span id="resultadoOtrosAlgoritmos"></span>
+        </td> 
+        <td>
+          <button> <a href="Page1.html">Regresar</a></button>
+        </td>      
       </tfoot>
     </table>
 </div>
+</br>
 
 
 
-  <h1 id="title">HTML FILE</h1>
-  <p class="text">HTML (HyperText Markup Language) es el lenguaje estándar para crear
+  <h1 id="html">HTML FILE</h1>
+  <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear
     páginas web. Utiliza etiquetas para estructurar el contenido, como encabezados,
     párrafos, listas y enlaces. Una característica interesante de HTML es su
     capacidad para integrar contenido multimedia, como imágenes y videos,
@@ -109,14 +105,14 @@
     optimización para motores de búsqueda.</p>
 
 
-  <h1 id="title">CSS FILE</h1>
+  <h1 id="css">CSS FILE</h1>
   <p class="text">Un archivo .css es un archivo de hoja de estilo utilizado para dar estilo
     y diseño a los elementos de una página web. Define cómo se verán los elementos,
     como colores, fuentes, márgenes y disposición. Esto permite separar la
     estructura HTML del diseño visual, lo que hace que el mantenimiento y
     la actualización sean más eficientes.</p>
 
-  <h1 id="title">JS FILE</h1>
+  <h1 id="js">JS FILE</h1>
   <p class="text">JavaScript es un lenguaje de programación ampliamente utilizado en el
     desarrollo web. Es un lenguaje de scripting que se ejecuta en el navegador
     del usuario y permite la creación de interacciones dinámicas en una página web.
@@ -126,7 +122,7 @@
 
   <table>
     <thead>
-      <th colspan="3">Machine Learning</th>
+      <th colspan="3" id="MLTable">Machine Learning</th>
     </thead>
     </tbody>
     <tr>
@@ -153,13 +149,56 @@
       </tfoot>
   </table>
   </br>
-
+  <table>
+    <!-- Table header -->
+    <thead>
+      <th colspan="4" id="OSTable">Sistemas Operativos</th>
+    </thead>
+    
+    <!-- Table body -->
+    <tbody<tr>
+      <th>Sistema Operativo</th>
+      <th>Descripción</th>
+      <th>Fecha de Lanzamiento</th>
+    </tr>
+    <tr>
+      <td rowspan="5"><br><img src="images\operating-system.jpg" alt="Image" width="320"></td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>Sistema operativo desarrollado por Microsoft con una interfaz gráfica de usuario.</td>
+      <td>Noviembre de 1985</td>
+    </tr>
+    <tr>
+      <td>macOS</td>
+      <td>Sistema operativo de Apple diseñado para sus computadoras Macintosh.</td>
+      <td>Marzo de 2001</td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>Sistema operativo de código abierto basado en el kernel de Linux. Viene en varias distribuciones.</td>
+      <td>Septiembre de 1991</td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>Sistema operativo móvil desarrollado por Google, basado en el kernel de Linux.</td>
+      <td>Septiembre de 2008</td>
+    </tr>
+    <tbody>
+    <!-- Table footer -->
+    <tfoot>
+      <tr>
+        <td colspan="4">Fuente: Wikipedia</td>
+      </tr>
+    </tfoot>
+    
+  </br>
   </table>
   </br>
   </br>
   <table>
     <thead>
-      <th colspan="4">Principales Iniciativas de Open-Source</th>
+      <th colspan="4" id="OpenSourceTable">Principales Iniciativas de Open-Source</th>
     </thead>
     </tbody>
     <tr>
