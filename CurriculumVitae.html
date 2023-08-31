@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Curriculum Vitae Form</title>
+  <title>Formulario Hoja de Vida</title>
   <link rel="stylesheet" href="Styles\cv_form.css">
   <script src="Scripts/image.js"></script>
 </head>
 <body>
-  <h1>Curriculum Vitae Form</h1>
+  <h1>Formulario Hoja de Vida</h1>
   <form action="submit_cv.php" method="POST">
 
-    <h2>Upload CV Image</h2>
+    <h2>Carga tu foto de perfil</h2>
     <label for="cv_image">Upload an Image:</label>
     <input type="file" id="cv_image" name="cv_image" onchange="previewImage(event)"><br><br>
     
     <img id="image_preview" src="#" alt="Image Preview">
 
 
-    <h2>Personal Information</h2>
-    <label for="full_name">Full Name:</label>
+    <h2>Información personal</h2>
+    <label for="full_name">Nombre Completo:</label>
     <input type="text" id="full_name" name="full_name" required><br><br>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required><br><br>
 
-    <label for="phone">Phone:</label>
+    <label for="phone">Telefono:</label>
     <input type="tel" id="phone" name="phone"><br><br>
-
-    <h2>Work Experience</h2>
-    <label for="job_title_1">Job Title:</label>
-    <input type="text" id="job_title_1" name="job_title_1" required><br><br>
-
-    <label for="employer_1">Employer:</label>
-    <input type="text" id="employer_1" name="employer_1" required><br><br>
-
-    <label for="work_period_1">Work Period:</label>
-    <input type="text" id="work_period_1" name="work_period_1" required><br><br>
-
-    <!-- Repeat the above fields for additional work experiences -->
-
-    <h2>Education</h2>
-    <label for="degree_1">Degree:</label>
-    <input type="text" id="degree_1" name="degree_1" required><br><br>
-
-    <label for="institution_1">Institution:</label>
+    <h2>Sexo:</h2>
+    <input type="radio" id="sexo" name="sexo" required>
+    <label for="sexo">masculino</label>
+    <input type="radio" id="sexo2" name="sexo" required>
+    <label for="sexo2">femenino</label>
+    <input type="radio" id="sexo3" name="sexo" required>
+    <label for="sexo3">otro</label><br>
+    <h2>Libreta militar:</h2>
+        <input type="radio" id="tMilitar" name="tMilitar" required>
+        <label for="tMilitar">Primera clase</label>
+        <input type="radio" id="tMilitar2" name="tMilitar" required>
+        <label for="tMilitar2">Segunda clase</label>
+        <input type="radio" id="tMilitar3" name="tMilitar" required>
+        <label for="tMilitar2">No tengo </label><br><br>
+   
+    <h2>Educación</h2>
+    <label for="degree_1">Grado:</label>
+    <input type="text" id="degree_1" name="degree_1" required></br>
+    
+    <label for="yearDegree">Año de graduación</label>
+  </br>
+    <select id="Año de graducción">
+        <option value="1">2023</option>
+        <option value="2">2024</option>
+        <option value="3">2025</option>
+        <option value="4">2026</option>
+        <option value="5">2027</option>
+    </select>
+  </br>
+    <label for="institution_1">Institución:</label>
     <input type="text" id="institution_1" name="institution_1" required><br><br>
 
-    <label for="graduation_year_1">Graduation Year:</label>
+    <label for="graduation_year_1">Año de graduación:</label>
     <input type="text" id="graduation_year_1" name="graduation_year_1" required><br><br>
 
     <!-- Repeat the above fields for additional education entries -->
 
-    <h2>Skills</h2>
+    <h2>Experiencia Laboral</h2>
+    <label for="job_title_1">Cargo:</label>
+    <input type="text" id="job_title_1" name="job_title_1" required><br><br>
+
+    <label for="employer_1">Empleador:</label>
+    <input type="text" id="employer_1" name="employer_1" required><br><br>
+
+    <label for="work_period_1">Período:</label>
+    <input type="text" id="work_period_1" name="work_period_1" required><br><br>
+
+    <!-- Repeat the above fields for additional work experiences -->
+
+    
+
+    <h2>Habilidades</h2>
     <div class="checkbox-group">
       <label>
-        <input type="checkbox" name="skills[]" value="Communication"> Communication
+        <input type="checkbox" name="skills[]" value="Communication"> Communicación
       </label>
       <label>
-        <input type="checkbox" name="skills[]" value="Teamwork"> Teamwork
+        <input type="checkbox" name="skills[]" value="Teamwork"> Trabajo en equipo
       </label>
       <label>
-        <input type="checkbox" name="skills[]" value="Problem Solving"> Problem Solving
+        <input type="checkbox" name="skills[]" value="Problem Solving"> Resolución de problemas
+      </label>
+      <label>
+        <input type="checkbox" name="skills[]" value="Creativity"> Creatividad
+      </label>
+      <label>
+        <input type="checkbox" name="skills[]" value="CriticalThink"> Pensamiento Creativo
+      </label>
+      <label>
+        <input type="checkbox" name="skills[]" value="Pressure"> Trabajo bajo presión
       </label>
       <!-- Add more checkbox options as needed -->
     </div>

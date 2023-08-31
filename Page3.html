@@ -7,43 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-<script>
-  window.onload = function() {
-      // Obtén los parámetros de la URL
-      const params = new URLSearchParams(window.location.search);
 
-      // Obtiene los valores de los parámetros del formulario
-      const algoritmo1 = params.get('Algoritmo1');
-      const algoritmo2 = params.get('Algoritmo2');
-      const algoritmo3 = params.get('Algoritmo3');
-      const algoritmo4 = params.get('Algoritmo4');
-      const algoritmo5 = params.get('Algoritmo5');
-      const algoritmo6 = params.get('Algoritmo6');
-
-      // ... Obtén los otros valores de algoritmos
-
-      // Actualiza el contenido de elementos HTML con los valores
-      document.getElementById('resultadoAlgoritmo1').textContent = algoritmo1;
-      document.getElementById('resultadoAlgoritmo2').textContent = algoritmo2;
-      document.getElementById('resultadoAlgoritmo3').textContent = algoritmo3;
-      document.getElementById('resultadoAlgoritmo4').textContent = algoritmo4;
-      document.getElementById('resultadoAlgoritmo5').textContent = algoritmo5;
-      document.getElementById('resultadoAlgoritmo6').textContent = algoritmo6;
-      // ... Actualiza los otros elementos HTML con los valores
-
-      // También puedes hacer algo similar con el textarea
-      const otrosAlgoritmos = params.get('OtrosAlgoritmos');
-      document.getElementById('resultadoOtrosAlgoritmos').textContent = otrosAlgoritmos;
-  };
-</script>
 </head>
-
 <html>
-
 <body>
-  <button type="button"><a href="Page1.html"> Page 1</a></button>
-  <button type="button"><a href="Page2.html"> Page 2</a></button>
-
 <div class="margen">
   <h1 id="title">Algoritmos de Ordenamiento</h1>
   <p class="text">Los algoritmos de ordenamiento son un conjunto de instrucciones que se utilizan para ordenar una lista
@@ -51,7 +18,6 @@
     Los elementos pueden ser números, letras o cualquier otro tipo de datos. El ordenamiento se puede realizar en orden
     ascendente o descendente.</p>
   </br>
-
   <!--En el action colocacamos la ruta donde queremos que se envie la informacion-->
     <table>
       <thead>

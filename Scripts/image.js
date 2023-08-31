@@ -9,5 +9,6 @@ function previewImage(event) {
 
     if (file) {
       reader.readAsDataURL(file);
+      
     }
   }

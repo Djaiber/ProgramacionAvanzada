@@ -13,10 +13,12 @@ function validarCampos(){
   }
   else if (algoritmo1.length > 20 || algoritmo2.length > 20 || algoritmo3.length > 20 || algoritmo4.length > 20 || algoritmo5.length > 20 || algoritmo6.length > 20 || otrosAlgoritmos.length > 20) {
     alert("Los campos no pueden tener más de 20 caracteres");
+    event.preventDefault();
     return false;
   }
   else if (isNaN(algoritmo1) == false || isNaN(algoritmo2) == false || isNaN(algoritmo3) == false || isNaN(algoritmo4) == false || isNaN(algoritmo5) == false || isNaN(algoritmo6) == false || isNaN(otrosAlgoritmos) == false) {
     alert("Los campos no pueden ser numéricos");
+    event.preventDefault();
     return false;
   }
 }
