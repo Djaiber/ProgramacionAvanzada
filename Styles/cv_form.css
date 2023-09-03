@@ -45,11 +45,55 @@ button[type="submit"]:hover {
 .checkbox-group {
     margin-top: 5px;
   }
-  .checkbox-group label {
+.checkbox-group label {
     display: block;
     margin-bottom: 5px;
   }
-#image_preview {
-    max-width: 300px;
-    margin-top: 10px;
+
+/* Style the container for the upload box */
+.image-upload-box {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
   }
+  
+  /* Style the label with the SVG icon and text */
+  .upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .upload-label svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    fill: #007bff; /* Change the color to your desired color */
+  }
+
+  /* Style the input element (hidden) */
+  #cv_image {
+    display: none;
+    
+  }
+  /* Style the image preview container */
+  .image-preview-container {
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  
+  /* Style the image preview */
+  #image_preview {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px 8px;
+    
+  }
+ 
+  
