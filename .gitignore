@@ -4,10 +4,11 @@
 /RutinaGYM/build/Web/META-INF
 /RutinaGYM/build/Web/WEB-INF
 /RutinaGYM/src/conf/MANIFEST.MF
-.xml
+/RutinaGYM/src/conf/MANIFEST.MF
 /RutinaGYM/build/empty
 /RutinaGYM/build/libs
 /RutinaGYM/build/tmp
+/RutinaGYM/build.xml
 /RutinaGYM/build/generated-sources
 /RutinaGYM/build/classes
 /RutinaGYM/nbproject
