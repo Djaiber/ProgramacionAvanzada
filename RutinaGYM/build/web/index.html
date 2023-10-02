@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+<head>
+    <title>Formulario de Usuario</title>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Usuario</h1>
+    <form action="ServletUsuario" method="get">
+        <label for="nombreUsuario">Nombre de Usuario:</label>
+        <input type="text" id="nombreUsuario" name="nombreUsuario"><br><br>
+
+        <label for="numeroCelular">Número de Celular:</label>
+        <input type="text" id="numeroCelular" name="numeroCelular"><br><br>
+
+        <label for="correoUsuario">Correo Electrónico:</label>
+        <input type="email" id="correoUsuario" name="correoUsuario"><br><br>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="edadUsuario">Edad:</label>
+        <input type="text" id="edadUsuario" name="edadUsuario"><br><br>
+
+        <label for="estatura">Estatura (en metros):</label>
+        <input type="text"  id="estatura" name="estatura"><br><br>
+
+        <label for="peso">Peso (en kilogramos):</label>
+        <input type="text" id="peso" name="peso"><br><br>
+
+        <label for="objetivo">Objetivo en el Gimnasio:</label><br>
+        <input type="radio" id="objetivoPerdidaPeso" name="objetivo" value="Ganar Peso">
+        <label for="objetivoPerdidaPeso">Ganar Fuerza</label><br>
+        <input type="radio" id="objetivoMusculacion" name="objetivo" value="Cardio">
+        <label for="objetivoMusculacion">Cardio</label><br>
+        <input type="radio" id="objetivoAcondicionamiento" name="objetivo" value="Ganar Flexibilidad">
+        <label for="objetivoAcondicionamiento">Ganar Flexibilidad</label><br><br>
+
+        <label for="diasDisponibles">Días Disponibles en el Gimnasio:</label><br>
+        <input type="number" id="diasDisponibles" name="diasDisponibles" min="1" max="7"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+
