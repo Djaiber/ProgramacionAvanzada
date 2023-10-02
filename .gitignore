@@ -1,3 +1,22 @@
 /images
 /images
 /.vscode
+/RutinaGYM/build/Web/META-INF
+/RutinaGYM/build/Web/WEB-INF
+/RutinaGYM/src/conf/MANIFEST.MF
+.xml
+/RutinaGYM/build/empty
+/RutinaGYM/build/libs
+/RutinaGYM/build/tmp
+/RutinaGYM/build/generated-sources
+/RutinaGYM/build/classes
+/RutinaGYM/nbproject
+/RutinaGYM/src/src
+/RutinaGYM/Web
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
