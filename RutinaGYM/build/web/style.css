@@ -1,0 +1,77 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 sept 2023, 22:09:06
+    Author     : JAIBER DÌAZ
+*/
+
+/* Apply some basic styles to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+
+/* Style the form container */
+h1 {
+    font-size: 36px;
+    margin: 20px;
+}
+
+form {
+    background-color: #222;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display:inline-block;
+}
+
+/* Style the form elements */
+label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff9900; /* Orange color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('arrow.png'); /* Add an arrow icon for selects */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 18px;
+}
+
+input[type="submit"] {
+    background-color: #ff9900;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffcc00; /* Lighter orange on hover */
+}
